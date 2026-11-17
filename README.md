@@ -4,7 +4,7 @@ Para auxiliar no uso e conhecimento desse serviço gratuito da cidade de Joinvil
 
 **Site:** https://castracaojoinville.pages.dev
 
-Ficha online para pedir a castração gratuita de cães e gatos em Joinville/SC. A pessoa preenche os dados do tutor e dos animais, e o site monta a ficha e abre o WhatsApp do Centro de Bem-Estar Animal (CBEA), (47) 8880-1911, com a mensagem pronta.
+Formulário online para solicitar a ficha de castração gratuita de cães e gatos em Joinville/SC. A pessoa preenche os dados do tutor e dos animais, e o site abre o WhatsApp do Centro de Bem-Estar Animal (CBEA), (47) 8880-1911, com a mensagem pronta. O CBEA prepara a ficha com esses dados, e com ela o próprio tutor faz o agendamento.
 
 > Iniciativa independente, sem vínculo oficial com a Prefeitura de Joinville. Nenhum dado é salvo: tudo roda no navegador e vai só na mensagem do WhatsApp.
 
