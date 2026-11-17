@@ -22,6 +22,7 @@
   --r:16px;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.45}
 a{color:var(--green)} a:hover{color:var(--green-dk)}
@@ -223,6 +224,13 @@ html{scroll-behavior:smooth}
         <label class="f" data-k="end">Endereço completo<span class="hint">Rua, número e bairro</span>
           <input type="text" name="end" autocomplete="street-address" aria-describedby="e-end">
           <span class="err" id="e-end">Escreva seu endereço.</span></label>
+        <fieldset data-k="cadunico" aria-describedby="h-cad e-cad"><legend>Você tem Cadastro Único no CRAS?</legend>
+          <div class="tiles">
+            <label class="tile"><input type="radio" name="cadunico" value="Sim"><span>Sim</span></label>
+            <label class="tile"><input type="radio" name="cadunico" value="Não"><span>Não</span></label>
+          </div>
+          <span class="hint" id="h-cad" style="display:block;margin-top:6px">Se não tiver, não tem problema: é só marcar "Não" e continuar.</span>
+          <span class="err" id="e-cad">Marque Sim ou Não.</span></fieldset>
       </section>
 
       <div id="animais" style="display:flex;flex-direction:column;gap:18px;scroll-margin-top:84px"></div>
@@ -323,7 +331,7 @@ const maskTel = (v) => {
   return '(' + d.slice(0, 2) + ') ' + d.slice(2, meio) + (d.length > meio ? '-' + d.slice(meio) : '');
 };
 
-const TUTOR = { nome: 'Nome completo', cpf: 'CPF', rg: 'RG', tel: 'Telefone', end: 'Endereço' };
+const TUTOR = { nome: 'Nome completo', cpf: 'CPF', rg: 'RG', tel: 'Telefone', end: 'Endereço', cadunico: 'Cadastro Único (Sim ou Não)' };
 const ANIMAL = { nome: 'nome', especie: 'espécie', sexo: 'sexo', porte: 'porte', peso: 'peso', idade: 'idade', cor: 'cor', raca: 'raça' };
 const regraTutor = { cpf: cpfValido, tel: (v) => [10, 11].includes(digits(v).length) };
 const regraAnimal = { peso: (v) => /^\d+([.,]\d+)?$/.test(v.trim()) && parseFloat(v.replace(',', '.')) > 0 };
@@ -361,7 +369,7 @@ const val = (el, k) => {
   return r && (r.type !== 'radio' || r.checked) ? r.value.trim() : '';
 };
 function dados() {
-  const t = {}; for (const k in TUTOR) t[k] = $('[name=' + k + ']', form).value.trim();
+  const t = {}; for (const k in TUTOR) t[k] = val($('#tutor'), k);
   const animais = $$('.animal', lista).map((c) => {
     const a = {}; for (const k of [...Object.keys(ANIMAL), 'chip']) a[k] = val(c, k);
     return a;
@@ -387,7 +395,7 @@ function validar() {
 }
 function mensagem() {
   const { t, animais } = dados();
-  let m = '*FICHA DE CASTRAÇÃO GRATUITA - JOINVILLE*\n\n*TUTOR*\nNome: ' + t.nome + '\nCPF: ' + t.cpf + '\nRG: ' + t.rg + '\nTelefone: ' + t.tel + '\nEndereço: ' + t.end + '\n';
+  let m = '*FICHA DE CASTRAÇÃO GRATUITA - JOINVILLE*\n\n*TUTOR*\nNome: ' + t.nome + '\nCPF: ' + t.cpf + '\nRG: ' + t.rg + '\nTelefone: ' + t.tel + '\nEndereço: ' + t.end + '\nCadastro Único (CRAS): ' + t.cadunico + '\n';
   animais.forEach((a, i) => {
     m += '\n*ANIMAL ' + (i + 1) + '*\nNome: ' + a.nome + '\nEspécie: ' + a.especie + '\nSexo: ' + a.sexo + '\nPeso estimado: ' + a.peso + ' kg\nPorte: ' + a.porte +
       '\nCor: ' + a.cor + '\nRaça: ' + a.raca + '\nIdade: ' + a.idade + '\nMicrochip: ' + (a.chip || 'Não possui') + '\n';
