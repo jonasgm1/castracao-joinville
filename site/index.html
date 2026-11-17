@@ -339,7 +339,7 @@ function addAnimal() {
   });
   $('h2', el).id = 'h-a' + id;
   el.setAttribute('aria-labelledby', 'h-a' + id);
-  $('.btn-rm', el).onclick = () => { el.remove(); renumerar(); atualizar(); };
+  $('.btn-rm', el).onclick = () => { if ($$('.animal', lista).length < 2) return; el.remove(); renumerar(); atualizar(); };
   lista.append(el);
   renumerar();
   return el;
@@ -379,6 +379,7 @@ function validar() {
       if (!ok) erros.push([$('[data-k=' + k + ']', c), 'Animal ' + (i + 1) + ': ' + ANIMAL[k]]);
     }
   });
+  if (!animais.length) erros.push([$('#add'), 'Adicione pelo menos 1 animal']);
   return erros;
 }
 function mensagem() {
@@ -401,7 +402,7 @@ function marcar(erros) {
 function atualizar() {
   const erros = validar();
   const tutorOk = !erros.some((e) => e[0].closest('#tutor'));
-  const animaisOk = !erros.some((e) => e[0].closest('.animal'));
+  const animaisOk = !erros.some((e) => !e[0].closest('#tutor'));
   $('#st-1').classList.toggle('done', tutorOk);
   $('#st-2').classList.toggle('done', animaisOk);
   $('#st-3').classList.toggle('done', false);
@@ -412,7 +413,7 @@ function atualizar() {
     $('#summary-list').replaceChildren(...erros.map(([w, txt]) => {
       const li = document.createElement('li'), a = document.createElement('a');
       a.href = '#'; a.textContent = txt;
-      a.onclick = (ev) => { ev.preventDefault(); w.scrollIntoView({ block: 'center' }); $('input', w).focus({ preventScroll: true }); };
+      a.onclick = (ev) => { ev.preventDefault(); w.scrollIntoView({ block: 'center' }); ($('input', w) || w).focus({ preventScroll: true }); };
       li.append(a); return li;
     }));
   }
