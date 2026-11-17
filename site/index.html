@@ -122,6 +122,13 @@ details.preview pre{margin:0;padding:0 14px 14px;white-space:pre-wrap;word-break
 .btn-wa svg{width:26px;height:26px}
 .to{margin:0;text-align:center;font-size:14px;color:var(--ink-2)}
 .to a{white-space:nowrap}
+.docs{background:var(--green-lt);border:2px solid var(--green-md);border-radius:14px;padding:12px 14px;font-size:14.5px}
+.docs>b{display:flex;align-items:center;gap:8px;font-size:15.5px;font-weight:900;color:var(--green-dk)}
+.docs>b .ico{font-size:20px}
+.docs ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.docs li{display:flex;gap:8px;align-items:flex-start}
+.docs li .ico{font-size:18px;color:var(--green);margin-top:2px}
+.docs p{margin:8px 0 0;color:var(--ink-2)}
 .privacy{display:flex;gap:8px;align-items:flex-start;font-size:14px;color:var(--ink-2)}
 .privacy .ico{font-size:18px;color:var(--green);margin-top:1px}
 
@@ -159,6 +166,9 @@ html{scroll-behavior:smooth}
   <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
   <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
   <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></symbol>
+  <symbol id="i-idcard" viewBox="0 0 24 24"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
 </svg>
 
@@ -198,6 +208,15 @@ html{scroll-behavior:smooth}
 <main class="wrap">
   <p class="notice" role="note"><svg class="ico"><use href="#i-info"/></svg>
     <span><b>Iniciativa independente</b>, sem vínculo com a Prefeitura. Seus dados vão pelo WhatsApp ao <b>Centro de Bem-Estar Animal (CBEA)</b>, que prepara a sua ficha de castração. Com a ficha em mãos, <b>é você quem faz o agendamento</b>.</span></p>
+
+  <aside class="docs" aria-labelledby="h-docs">
+    <b id="h-docs"><svg class="ico"><use href="#i-file"/></svg>Tenha seus documentos em mãos</b>
+    <ul>
+      <li><svg class="ico"><use href="#i-idcard"/></svg><span><b>Documento com foto</b>: RG, CNH ou carteira de trabalho</span></li>
+      <li><svg class="ico"><use href="#i-home"/></svg><span><b>Comprovante de endereço</b>: conta de luz, água, gás ou internet, ou contrato de aluguel</span></li>
+    </ul>
+    <p>O CBEA pode pedir uma foto deles. Se pedir, é só mandar na mesma conversa do WhatsApp.</p>
+  </aside>
 
   <form id="form" novalidate>
     <div style="display:flex;flex-direction:column;gap:18px">
@@ -245,6 +264,10 @@ html{scroll-behavior:smooth}
         <div class="summary" id="summary" role="alert" tabindex="-1" hidden>
           <strong><svg class="ico"><use href="#i-alert"/></svg>Falta corrigir:</strong>
           <ul id="summary-list"></ul>
+        </div>
+        <div class="docs">
+          <b><svg class="ico"><use href="#i-file"/></svg>Lembrete</b>
+          <p style="color:inherit">Se o CBEA pedir, envie pelo WhatsApp a foto do seu <b>documento com foto</b> (RG ou CNH) e do <b>comprovante de endereço</b> (conta de luz ou água).</p>
         </div>
         <details class="preview"><summary>Ver a ficha que será enviada</summary><pre id="preview"></pre></details>
         <button type="submit" class="btn-wa">
