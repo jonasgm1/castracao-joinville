@@ -1,0 +1,10 @@
+# ferramentas locais
+.claude/
+.impeccable/
+.wrangler/
+node_modules/
+.env*
+.dev.vars
+
+# export antigo do Claude Design (substituído por site/index.html)
+Ficha de Castração Joinville.html

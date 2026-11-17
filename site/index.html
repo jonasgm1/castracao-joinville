@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Castração Gratuita Joinville</title>
+<meta name="description" content="Preencha a ficha de castração gratuita de cães e gatos em Joinville/SC e envie pelo WhatsApp do Centro de Bem-Estar Animal.">
+<meta name="theme-color" content="#0B6B4F">
+<meta property="og:title" content="Castração gratuita de cães e gatos · Joinville">
+<meta property="og:description" content="Ficha online: preencha em 3 minutos e envie pelo WhatsApp do Centro de Bem-Estar Animal.">
+<meta property="og:image" content="https://castracaojoinville.pages.dev/assets/brasao-joinville.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B6B4F' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='4' r='2'/%3E%3Ccircle cx='18' cy='8' r='2'/%3E%3Ccircle cx='20' cy='16' r='2'/%3E%3Cpath d='M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#0B6B4F; --green-dk:#084F3A; --green-xdk:#063D2D; --green-lt:#EAF5EF; --green-md:#CFE7DA;
+  --bg:#F4F7F5; --card:#fff; --ink:#14231C; --ink-2:#4A5C53; --line:#C9D6CF;
+  --wa:#1FA855; --wa-dk:#178A45; --err:#B3261E; --err-bg:#FFF1EC; --warn-bg:#FFF8E1; --warn-ink:#5C4400;
+  --r:16px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.45}
+a{color:var(--green)} a:hover{color:var(--green-dk)}
+.ico{width:1em;height:1em;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wrap{max-width:600px;margin:0 auto;padding:0 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid #F2B705;outline-offset:2px}
+
+/* ---------- Header ---------- */
+.hero{position:relative;overflow:hidden;color:#fff;padding:18px 0 76px;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(255,255,255,.14),transparent 45%),
+    linear-gradient(160deg,var(--green) 0%,var(--green-dk) 60%,var(--green-xdk) 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.07;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 24 24' fill='%23fff'%3E%3Cg transform='rotate(-18 12 12) scale(.55) translate(9 9)'%3E%3Ccircle cx='11' cy='4' r='2.2'/%3E%3Ccircle cx='18' cy='8' r='2.2'/%3E%3Ccircle cx='20' cy='16' r='2.2'/%3E%3Cpath d='M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:72px 72px}
+.hero .wrap{position:relative}
+.brand{display:flex;align-items:center;gap:12px}
+.seal{width:58px;height:58px;border-radius:16px;background:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.18);flex:none}
+.seal img{width:48px;height:auto;display:block}
+.brand-txt{display:flex;flex-direction:column;line-height:1.2}
+.brand-txt b{font-size:17px;font-weight:900;letter-spacing:.01em}
+.brand-txt span{font-size:13px;font-weight:700;opacity:.85;text-transform:uppercase;letter-spacing:.07em}
+.hero-body{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end;margin-top:26px}
+.eyebrow{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:5px 11px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.hero h1{margin:12px 0 8px;font-size:clamp(30px,8.4vw,42px);line-height:1.05;font-weight:900;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:#BFF0D4}
+.hero p.lead{margin:0;font-size:17px;max-width:30ch;opacity:.95}
+.pets{display:flex;flex-direction:column;gap:10px;margin-bottom:4px}
+.pet{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--green);font-size:34px;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.pet.cat{transform:rotate(-8deg);background:#BFF0D4;color:var(--green-xdk)}
+.pet.dog{transform:rotate(6deg);margin-left:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;padding:0;list-style:none}
+.chips li{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:rgba(0,0,0,.18);padding:7px 12px;border-radius:999px}
+.chips .ico{font-size:17px;color:#BFF0D4}
+
+/* ---------- Stepper ---------- */
+.stepper{position:sticky;top:0;z-index:5;margin-top:-52px}
+.stepper ol{list-style:none;margin:0;padding:10px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-radius:var(--r);box-shadow:0 8px 24px rgba(20,35,28,.12)}
+.stepper li{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:var(--ink-2);min-width:0}
+.stepper li a{display:flex;align-items:center;gap:8px;color:inherit;text-decoration:none;min-width:0}
+.stepper .n{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--green-lt);color:var(--green);font-size:14px;border:2px solid var(--green-md)}
+.stepper .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stepper li.done .n{background:var(--green);border-color:var(--green);color:#fff}
+.stepper li.done .n span{display:none}
+.stepper li:not(.done) .n svg{display:none}
+.stepper li.done{color:var(--green)}
+
+/* ---------- Main ---------- */
+main{display:flex;flex-direction:column;gap:18px;padding-top:18px;padding-bottom:40px}
+.notice{display:flex;gap:10px;align-items:flex-start;background:var(--warn-bg);color:var(--warn-ink);border-radius:14px;padding:12px 14px;font-size:14.5px}
+.notice .ico{font-size:20px;margin-top:1px}
+.notice b{font-weight:800}
+.card{background:var(--card);border-radius:20px;padding:20px 16px;display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 3px rgba(20,35,28,.08);scroll-margin-top:84px}
+.card-h{display:flex;align-items:center;gap:12px}
+.card-h .badge{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--green-lt);color:var(--green);font-size:24px;flex:none}
+.card-h .h{flex:1;min-width:0}
+.card-h small{display:block;font-size:12.5px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.07em}
+.card-h h2{margin:0;font-size:21px;font-weight:900;line-height:1.15}
+.f{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:15.5px}
+.hint{font-weight:400;color:var(--ink-2);font-size:14px}
+.opt{font-weight:600;color:var(--ink-2);font-size:13px;background:var(--bg);padding:1px 8px;border-radius:999px;margin-left:4px}
+input[type=text],input[type=tel]{font:inherit;font-size:17px;width:100%;min-height:54px;padding:12px 14px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+input::placeholder{color:#66776F}
+input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px rgba(11,107,79,.18)}
+[aria-invalid=true]{border-color:var(--err)!important;background:#FFFBFA!important}
+.err{display:none;color:var(--err);font-size:14px;font-weight:700}
+.invalid .err{display:block}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{font-weight:700;font-size:15.5px;padding:0 0 8px}
+.tiles{display:grid;grid-template-columns:repeat(var(--cols,2),minmax(0,1fr));gap:8px}
+.tile{position:relative}
+.tile input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.tile span{display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;padding:0 6px;border:2px solid var(--line);border-radius:12px;background:#fff;font-weight:800;font-size:16px;transition:background .15s,border-color .15s,color .15s}
+.tile.big span{flex-direction:column;gap:4px;min-height:86px}
+.tile.big .ico{font-size:30px}
+.tile input:checked+span{background:var(--green);border-color:var(--green);color:#fff}
+.tile input:focus-visible+span{outline:3px solid #F2B705;outline-offset:2px}
+.tile:hover input:not(:checked)+span{border-color:var(--green);background:var(--green-lt)}
+fieldset.invalid .tile span{border-color:var(--err)}
+
+.btn-rm{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 12px;border:2px solid var(--line);background:#fff;color:var(--err);border-radius:12px;font:inherit;font-weight:800;font-size:14.5px;cursor:pointer}
+.btn-add{display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;border:2px dashed var(--green);background:var(--green-lt);color:var(--green);border-radius:var(--r);font:inherit;font-weight:900;font-size:17px;cursor:pointer}
+.btn-add:hover{background:var(--green-md)}
+
+.summary{background:var(--err-bg);color:#7A2410;border-radius:14px;padding:14px 16px;font-size:15px}
+.summary strong{display:flex;align-items:center;gap:8px;font-size:16px}
+.summary ul{margin:8px 0 0;padding-left:20px}
+.summary a{color:#7A2410;font-weight:700}
+details.preview{border:2px solid var(--green-md);border-radius:14px;background:var(--green-lt)}
+details.preview summary{cursor:pointer;padding:12px 14px;font-weight:800;color:var(--green)}
+details.preview pre{margin:0;padding:0 14px 14px;white-space:pre-wrap;word-break:break-word;font:inherit;font-size:14.5px}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:10px;min-height:62px;width:100%;border:0;background:var(--wa);color:#fff;border-radius:var(--r);font:inherit;font-weight:900;font-size:18px;cursor:pointer;box-shadow:0 8px 20px rgba(31,168,85,.3)}
+.btn-wa:hover{background:var(--wa-dk)}
+.btn-wa svg{width:26px;height:26px}
+.to{margin:0;text-align:center;font-size:14px;color:var(--ink-2)}
+.to a{white-space:nowrap}
+.privacy{display:flex;gap:8px;align-items:flex-start;font-size:14px;color:var(--ink-2)}
+.privacy .ico{font-size:18px;color:var(--green);margin-top:1px}
+
+footer{background:var(--green-xdk);color:#D5E8DE;padding:28px 0 calc(28px + env(safe-area-inset-bottom));font-size:14px}
+footer .wrap{display:flex;flex-direction:column;gap:12px}
+footer a{color:#fff}
+footer .fb{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800}
+footer .fb img{width:36px;height:auto;background:#fff;border-radius:10px;padding:3px}
+footer p{margin:0}
+
+@media (min-width:640px){
+  .card{padding:26px 24px}
+  .pet{width:84px;height:84px;font-size:44px}
+}
+@media (max-width:360px){ .row2{grid-template-columns:1fr} .stepper .t{display:none} .stepper ol{justify-items:center} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+<!-- Ícones: Lucide (ISC) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cat" viewBox="0 0 24 24"><path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"/></symbol>
+  <symbol id="i-dog" viewBox="0 0 24 24"><path d="M11.25 16.25h1.5L12 17z"/><path d="M16 14v.5"/><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309"/><path d="M8 14v.5"/><path d="M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <div class="seal"><img src="assets/brasao-joinville.png" width="48" height="45" alt="Brasão de Joinville"></div>
+      <div class="brand-txt"><span>Joinville · SC</span><b>Castração gratuita</b></div>
+    </div>
+    <div class="hero-body">
+      <div>
+        <span class="eyebrow"><svg class="ico"><use href="#i-paw"/></svg>Cães e gatos</span>
+        <h1>Ficha de castração <em>gratuita</em></h1>
+        <p class="lead">Preencha seus dados e os do seu animal. No final, a ficha vai pronta pelo WhatsApp.</p>
+      </div>
+      <div class="pets" aria-hidden="true">
+        <div class="pet cat"><svg class="ico"><use href="#i-cat"/></svg></div>
+        <div class="pet dog"><svg class="ico"><use href="#i-dog"/></svg></div>
+      </div>
+    </div>
+    <ul class="chips">
+      <li><svg class="ico"><use href="#i-heart"/></svg>100% gratuito</li>
+      <li><svg class="ico"><use href="#i-clock"/></svg>Leva uns 3 minutos</li>
+      <li><svg class="ico"><use href="#i-shield"/></svg>Nada fica salvo aqui</li>
+    </ul>
+  </div>
+</header>
+
+<nav class="stepper wrap" aria-label="Etapas">
+  <ol>
+    <li id="st-1"><a href="#tutor"><span class="n"><span>1</span><svg class="ico"><use href="#i-check"/></svg></span><span class="t">Tutor</span></a></li>
+    <li id="st-2"><a href="#animais"><span class="n"><span>2</span><svg class="ico"><use href="#i-check"/></svg></span><span class="t">Animal</span></a></li>
+    <li id="st-3"><a href="#enviar"><span class="n"><span>3</span><svg class="ico"><use href="#i-check"/></svg></span><span class="t">Enviar</span></a></li>
+  </ol>
+</nav>
+
+<main class="wrap">
+  <p class="notice" role="note"><svg class="ico"><use href="#i-info"/></svg>
+    <span><b>Iniciativa independente</b>, sem vínculo com a Prefeitura. A ficha é enviada direto ao WhatsApp do <b>Centro de Bem-Estar Animal (CBEA)</b>, que confirma o agendamento.</span></p>
+
+  <form id="form" novalidate>
+    <div style="display:flex;flex-direction:column;gap:18px">
+
+      <section class="card" id="tutor" aria-labelledby="h-tutor">
+        <div class="card-h">
+          <div class="badge"><svg class="ico"><use href="#i-user"/></svg></div>
+          <div class="h"><small>Etapa 1 de 3</small><h2 id="h-tutor">Seus dados</h2></div>
+        </div>
+        <label class="f" data-k="nome">Nome completo
+          <input type="text" name="nome" autocomplete="name" aria-describedby="e-nome">
+          <span class="err" id="e-nome">Escreva seu nome completo.</span></label>
+        <div class="row2">
+          <label class="f" data-k="cpf">CPF
+            <input type="text" name="cpf" inputmode="numeric" placeholder="000.000.000-00" maxlength="14" aria-describedby="e-cpf">
+            <span class="err" id="e-cpf">CPF inválido.</span></label>
+          <label class="f" data-k="rg">RG
+            <input type="text" name="rg" inputmode="numeric" aria-describedby="e-rg">
+            <span class="err" id="e-rg">Escreva seu RG.</span></label>
+        </div>
+        <label class="f" data-k="tel">Telefone com WhatsApp
+          <input type="tel" name="tel" inputmode="tel" autocomplete="tel-national" placeholder="(47) 90000-0000" maxlength="15" aria-describedby="e-tel">
+          <span class="err" id="e-tel">Telefone com DDD, ex.: (47) 99999-0000.</span></label>
+        <label class="f" data-k="end">Endereço completo<span class="hint">Rua, número e bairro</span>
+          <input type="text" name="end" autocomplete="street-address" aria-describedby="e-end">
+          <span class="err" id="e-end">Escreva seu endereço.</span></label>
+      </section>
+
+      <div id="animais" style="display:flex;flex-direction:column;gap:18px;scroll-margin-top:84px"></div>
+
+      <button type="button" class="btn-add" id="add"><svg class="ico"><use href="#i-plus"/></svg>Adicionar outro animal</button>
+
+      <section class="card" id="enviar" aria-labelledby="h-enviar">
+        <div class="card-h">
+          <div class="badge"><svg class="ico"><use href="#i-check"/></svg></div>
+          <div class="h"><small>Etapa 3 de 3</small><h2 id="h-enviar">Conferir e enviar</h2></div>
+        </div>
+        <div class="summary" id="summary" role="alert" tabindex="-1" hidden>
+          <strong><svg class="ico"><use href="#i-alert"/></svg>Falta corrigir:</strong>
+          <ul id="summary-list"></ul>
+        </div>
+        <details class="preview"><summary>Ver a ficha que será enviada</summary><pre id="preview"></pre></details>
+        <button type="submit" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 0 1 2.76 6.68c0 5.2-4.24 9.43-9.45 9.43m8.04-17.47A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.3 11.3 0 0 0 5.37 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.33-8.03"/></svg>
+          Enviar ficha pelo WhatsApp
+        </button>
+        <p class="to">Para o Centro de Bem-Estar Animal · <a href="tel:+554788801911">(47) 8880-1911</a></p>
+        <p class="privacy"><svg class="ico"><use href="#i-lock"/></svg><span>Seus dados não ficam salvos neste site: eles vão só na mensagem que você envia pelo seu WhatsApp.</span></p>
+      </section>
+    </div>
+  </form>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fb"><img src="assets/brasao-joinville.png" width="36" height="34" alt="">Castração Gratuita Joinville</div>
+    <p>Iniciativa independente e sem fins lucrativos, sem vínculo oficial com a Prefeitura de Joinville. Informações oficiais em <a href="https://www.joinville.sc.gov.br/" rel="noopener">joinville.sc.gov.br</a>.</p>
+    <p>Código aberto (GPL-3.0). Achou um erro ou tem uma ideia? <a href="https://github.com/jonasgm1/castracao-joinville/issues" rel="noopener">Abra uma issue no GitHub</a>.</p>
+  </div>
+</footer>
+
+<template id="tpl-animal">
+  <section class="card animal" aria-labelledby="">
+    <div class="card-h">
+      <div class="badge"><svg class="ico"><use href="#i-paw"/></svg></div>
+      <div class="h"><small>Etapa 2 de 3</small><h2></h2></div>
+      <button type="button" class="btn-rm" hidden><svg class="ico"><use href="#i-trash"/></svg>Remover</button>
+    </div>
+    <label class="f" data-k="nome">Nome do animal
+      <input type="text" name="nome"><span class="err">Escreva o nome do animal.</span></label>
+    <fieldset data-k="especie"><legend>Espécie</legend>
+      <div class="tiles">
+        <label class="tile big"><input type="radio" name="especie" value="Canino"><span><svg class="ico"><use href="#i-dog"/></svg>Cão</span></label>
+        <label class="tile big"><input type="radio" name="especie" value="Felino"><span><svg class="ico"><use href="#i-cat"/></svg>Gato</span></label>
+      </div><span class="err">Escolha cão ou gato.</span></fieldset>
+    <fieldset data-k="sexo"><legend>Sexo</legend>
+      <div class="tiles">
+        <label class="tile"><input type="radio" name="sexo" value="Macho"><span>Macho</span></label>
+        <label class="tile"><input type="radio" name="sexo" value="Fêmea"><span>Fêmea</span></label>
+      </div><span class="err">Escolha o sexo.</span></fieldset>
+    <fieldset data-k="porte"><legend>Porte</legend>
+      <div class="tiles" style="--cols:3">
+        <label class="tile"><input type="radio" name="porte" value="Pequeno"><span>Pequeno</span></label>
+        <label class="tile"><input type="radio" name="porte" value="Médio"><span>Médio</span></label>
+        <label class="tile"><input type="radio" name="porte" value="Grande"><span>Grande</span></label>
+      </div><span class="err">Escolha o porte.</span></fieldset>
+    <div class="row2">
+      <label class="f" data-k="peso">Peso aprox. (kg)
+        <input type="text" name="peso" inputmode="decimal" placeholder="Ex.: 4"><span class="err">Só números, ex.: 4,5</span></label>
+      <label class="f" data-k="idade">Idade
+        <input type="text" name="idade" placeholder="Ex.: 2 anos"><span class="err">Escreva a idade.</span></label>
+    </div>
+    <label class="f" data-k="cor">Cor
+      <input type="text" name="cor" placeholder="Ex.: preto e branco"><span class="err">Escreva a cor.</span></label>
+    <label class="f" data-k="raca">Raça<span class="hint">Se não souber, escreva SRD (sem raça definida)</span>
+      <input type="text" name="raca"><span class="err">Escreva a raça ou SRD.</span></label>
+    <label class="f" data-k="chip">Nº do microchip <span class="hint">Só se tiver <span class="opt">opcional</span></span>
+      <input type="text" name="chip" inputmode="numeric"></label>
+  </section>
+</template>
+
+<script>
+const FONE = '554788801911';
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const digits = (v) => v.replace(/\D/g, '');
+
+function cpfValido(v) {
+  const d = digits(v);
+  if (d.length !== 11 || /^(\d)\1{10}$/.test(d)) return false;
+  for (const n of [9, 10]) {
+    let s = 0;
+    for (let i = 0; i < n; i++) s += +d[i] * (n + 1 - i);
+    if ((s * 10) % 11 % 10 !== +d[n]) return false;
+  }
+  return true;
+}
+const maskCpf = (v) => digits(v).slice(0, 11).replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+const maskTel = (v) => {
+  const d = digits(v).slice(0, 11);
+  if (d.length <= 2) return d.length ? '(' + d : '';
+  const meio = d.length > 10 ? 7 : 6;
+  return '(' + d.slice(0, 2) + ') ' + d.slice(2, meio) + (d.length > meio ? '-' + d.slice(meio) : '');
+};
+
+const TUTOR = { nome: 'Nome completo', cpf: 'CPF', rg: 'RG', tel: 'Telefone', end: 'Endereço' };
+const ANIMAL = { nome: 'nome', especie: 'espécie', sexo: 'sexo', porte: 'porte', peso: 'peso', idade: 'idade', cor: 'cor', raca: 'raça' };
+const regraTutor = { cpf: cpfValido, tel: (v) => [10, 11].includes(digits(v).length) };
+const regraAnimal = { peso: (v) => /^\d+([.,]\d+)?$/.test(v.trim()) && parseFloat(v.replace(',', '.')) > 0 };
+
+const form = $('#form'), lista = $('#animais'), tpl = $('#tpl-animal');
+let seq = 0, tentou = false;
+
+function addAnimal() {
+  const el = tpl.content.firstElementChild.cloneNode(true);
+  const id = ++seq;
+  $$('input[type=radio]', el).forEach((r) => (r.name = r.name + '-' + id)); // radios precisam de grupo único por animal
+  $$('[data-k]', el).forEach((w) => {
+    const err = $('.err', w); if (!err) return;
+    err.id = 'e-a' + id + '-' + w.dataset.k;
+    $$('input', w).forEach((i) => i.setAttribute('aria-describedby', err.id));
+  });
+  $('h2', el).id = 'h-a' + id;
+  el.setAttribute('aria-labelledby', 'h-a' + id);
+  $('.btn-rm', el).onclick = () => { el.remove(); renumerar(); atualizar(); };
+  lista.append(el);
+  renumerar();
+  return el;
+}
+function renumerar() {
+  const cards = $$('.animal', lista), varios = cards.length > 1;
+  cards.forEach((c, i) => {
+    $('h2', c).textContent = varios ? 'Animal ' + (i + 1) : 'Dados do animal';
+    $('.btn-rm', c).hidden = !varios;
+  });
+  $('#st-2 .t').textContent = varios ? 'Animais' : 'Animal';
+}
+
+const val = (el, k) => {
+  const r = $$('[name^="' + k + '"]', el).find((i) => i.type !== 'radio' || i.checked);
+  return r && (r.type !== 'radio' || r.checked) ? r.value.trim() : '';
+};
+function dados() {
+  const t = {}; for (const k in TUTOR) t[k] = $('[name=' + k + ']', form).value.trim();
+  const animais = $$('.animal', lista).map((c) => {
+    const a = {}; for (const k of [...Object.keys(ANIMAL), 'chip']) a[k] = val(c, k);
+    return a;
+  });
+  return { t, animais };
+}
+function validar() {
+  const erros = []; // [wrapper, texto]
+  const { t, animais } = dados();
+  for (const k in TUTOR) {
+    const ok = t[k] && (!regraTutor[k] || regraTutor[k](t[k]));
+    const w = $('#tutor [data-k=' + k + ']');
+    if (!ok) erros.push([w, TUTOR[k] + (t[k] ? ' inválido' : '')]);
+  }
+  $$('.animal', lista).forEach((c, i) => {
+    for (const k in ANIMAL) {
+      const v = animais[i][k], ok = v && (!regraAnimal[k] || regraAnimal[k](v));
+      if (!ok) erros.push([$('[data-k=' + k + ']', c), 'Animal ' + (i + 1) + ': ' + ANIMAL[k]]);
+    }
+  });
+  return erros;
+}
+function mensagem() {
+  const { t, animais } = dados();
+  let m = '*FICHA DE CASTRAÇÃO GRATUITA - JOINVILLE*\n\n*TUTOR*\nNome: ' + t.nome + '\nCPF: ' + t.cpf + '\nRG: ' + t.rg + '\nTelefone: ' + t.tel + '\nEndereço: ' + t.end + '\n';
+  animais.forEach((a, i) => {
+    m += '\n*ANIMAL ' + (i + 1) + '*\nNome: ' + a.nome + '\nEspécie: ' + a.especie + '\nSexo: ' + a.sexo + '\nPeso estimado: ' + a.peso + ' kg\nPorte: ' + a.porte +
+      '\nCor: ' + a.cor + '\nRaça: ' + a.raca + '\nIdade: ' + a.idade + '\nMicrochip: ' + (a.chip || 'Não possui') + '\n';
+  });
+  return m;
+}
+function marcar(erros) {
+  const ruins = new Set(erros.map((e) => e[0]));
+  $$('[data-k]', form).forEach((w) => {
+    const bad = tentou && ruins.has(w);
+    w.classList.toggle('invalid', bad);
+    $$('input', w).forEach((i) => i.type === 'radio' ? null : i.setAttribute('aria-invalid', bad));
+  });
+}
+function atualizar() {
+  const erros = validar();
+  const tutorOk = !erros.some((e) => e[0].closest('#tutor'));
+  const animaisOk = !erros.some((e) => e[0].closest('.animal'));
+  $('#st-1').classList.toggle('done', tutorOk);
+  $('#st-2').classList.toggle('done', animaisOk);
+  $('#st-3').classList.toggle('done', false);
+  $('#preview').textContent = mensagem().replace(/\*/g, '');
+  if (tentou) {
+    marcar(erros);
+    const box = $('#summary'); box.hidden = !erros.length;
+    $('#summary-list').replaceChildren(...erros.map(([w, txt]) => {
+      const li = document.createElement('li'), a = document.createElement('a');
+      a.href = '#'; a.textContent = txt;
+      a.onclick = (ev) => { ev.preventDefault(); w.scrollIntoView({ block: 'center' }); $('input', w).focus({ preventScroll: true }); };
+      li.append(a); return li;
+    }));
+  }
+  return erros;
+}
+
+form.addEventListener('input', (e) => {
+  const i = e.target;
+  if (i.name === 'cpf') i.value = maskCpf(i.value);
+  if (i.name === 'tel') i.value = maskTel(i.value);
+  atualizar();
+});
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  tentou = true;
+  const erros = atualizar();
+  if (erros.length) {
+    const box = $('#summary');
+    box.scrollIntoView({ block: 'center' }); box.focus({ preventScroll: true });
+    return;
+  }
+  $('#st-3').classList.add('done');
+  window.open('https://wa.me/' + FONE + '?text=' + encodeURIComponent(mensagem()), '_blank', 'noopener');
+});
+$('#add').onclick = () => { const el = addAnimal(); atualizar(); el.scrollIntoView({ block: 'start' }); $('input', el).focus({ preventScroll: true }); };
+
+addAnimal();
+atualizar();
+</script>
+</body>
+</html>
